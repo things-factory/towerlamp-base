@@ -58,9 +58,9 @@ towerlampOn.parameterSpec = [
       options: [
         { display: '0', value: 0x00 },
         { display: '1', value: 0x01 },
-        { display: '2', value: 0x02 }
-        { display: '3', value: 0x03 }
-        { display: '4', value: 0x04 }
+        { display: '2', value: 0x02 },
+        { display: '3', value: 0x03 },
+        { display: '4', value: 0x04 },
         { display: '5', value: 0x05 }
       ]
     }
