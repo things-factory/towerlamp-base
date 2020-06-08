@@ -2,7 +2,7 @@ import { Connections, TaskRegistry } from '@things-factory/integration-base'
 
 import { ACTION_TYPE } from '../connector/towerlamp-connector'
 
-async function towerlampOn(step, { logger }) {
+async function towerlampStatus(step, { logger }) {
   var {
     connection: connectionName,
     params: { soundGroup, sound, red, yellow, green, blue, white }
@@ -27,7 +27,7 @@ async function towerlampOn(step, { logger }) {
   
   var response = await request(message, { logger })
 
-  logger.info(`towerlampOn received: ${response.toString('hex')}`)
+  logger.info(`towerlampStatus received: ${response.toString('hex')}`)
 
   var soundGroup = response.readInt8(0)
   var redLamp = response.readInt8(0)
@@ -42,6 +42,6 @@ async function towerlampOn(step, { logger }) {
   return { data }
 }
 
-towerlampOn.parameterSpec = []
+towerlampStatus.parameterSpec = []
 
-TaskRegistry.registerTaskHandler('towerlamp-on', towerlampOn)
+TaskRegistry.registerTaskHandler('towerlamp-status', towerlampStatus)

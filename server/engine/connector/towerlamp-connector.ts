@@ -74,7 +74,6 @@ export class TowerlampConnector implements Connector {
                 throw new Error('socket closed')
               }
 
-              logger && logger.info(`Response : ${response.toString()}`)
               logger && logger.info(`Response : ${response.toString('hex')}`)
               return response
             } catch (e) {

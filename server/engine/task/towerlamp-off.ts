@@ -26,7 +26,7 @@ async function towerlampOff(step, { logger }) {
   
   var response = await request(message, { logger })
 
-  logger.info(`towerlampOn received: ${response.toString('hex')}`)
+  logger.info(`towerlampOff received: ${response.toString('hex')}`)
 
   return {
     data: response.toString('hex')
