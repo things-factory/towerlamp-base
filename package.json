@@ -35,6 +35,7 @@
     "p-queue": "^6.4.0"
   },
   "devDependencies": {
-    "@things-factory/auth-base": "^2.5.0"
+    "@things-factory/auth-base": "^2.5.0",
+    "@things-factory/operato-ecs": "^2.0.29"
   }
 }
